@@ -1,0 +1,92 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+body {
+  min-height: 100dvh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #222b6f7f;
+  font-family: "Poppins", sans-serif;
+}
+html {
+  font-size: 62.5%;
+}
+.content {
+  margin: auto;
+}
+.box {
+  width: 400px;
+  height: 300px;
+  background: linear-gradient(to right, #3da489, #4d53c6);
+  position: relative;
+  overflow: hidden;
+}
+.circle,
+.square,
+.triangle {
+  position: absolute;
+}
+.circle {
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.2);
+  top: -20%;
+  left: 5%;
+  animation: circle1 8s linear infinite;
+}
+.circle:nth-child(2) {
+  top: 105%;
+  left: 80%;
+  animation: circle2 11s linear infinite;
+}
+.square {
+  width: 35px;
+  height: 35px;
+  background-color: rgba(255, 255, 255, 0.2);
+  top: -22%;
+  left: 25%;
+  animation: square1 9s 1s linear infinite;
+}
+.square:nth-child(4) {
+  top: 105%;
+  left: 60%;
+  animation: square2 13s 2s linear infinite;
+  border-radius: 10px;
+}
+.triangle {
+  border-right: 25px solid transparent;
+  border-left: 25px solid transparent;
+  border-top: 45px solid rgba(255, 255, 255, 0.2);
+  left: 43%;
+  animation: triangle 10s linear alternate infinite;
+  top: -20%;
+}
+@keyframes circle1 {
+  100% {
+    transform: translateY(400px);
+  }
+}
+@keyframes circle2 {
+  100% {
+    transform: translateY(-400px);
+  }
+}
+@keyframes square1 {
+  100% {
+    transform: translateY(400px) rotate(360deg);
+  }
+}
+@keyframes square2 {
+  100%{
+    transform: translateY(-400px) rotate(360deg);
+  }
+}
+@keyframes triangle {
+  100%{
+    transform: translateY(380px) rotate(360deg);
+  }
+}
